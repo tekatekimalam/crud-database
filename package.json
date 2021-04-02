@@ -1,0 +1,24 @@
+{
+  "name": "crud-database",
+  "version": "1.0.0",
+  "description": "Aplikasi CRUD dengan node JS dan database mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alamasyarie/crud-database.git"
+  },
+  "keywords": [
+    "rest",
+    "API",
+    "nodeJS"
+  ],
+  "author": "Alam Asy'arie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alamasyarie/crud-database/issues"
+  },
+  "homepage": "https://github.com/alamasyarie/crud-database#readme"
+}
