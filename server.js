@@ -5,9 +5,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-  res.send("hello from server");
-});
+const routes = require("./routes");
+routes(app);
 
 app.listen(5000, () =>
   console.log("******** server running on port 5000 ********"),
