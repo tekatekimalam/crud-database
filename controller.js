@@ -36,3 +36,23 @@ exports.postMahasiswa = (req, res) => {
       : response.ok("Data berhasil ditambahkan", res);
   });
 };
+
+// Update data mahasiswa
+exports.updateMahasiswa = (req, res) => {
+  const { id, nim, nama, jurusan } = req.body;
+  const commandSql = `UPDATE mahasiswa SET nim=${nim}, nama=${nama}, jurusan=${jurusan} WHERE id=${id};`;
+
+  connection.query(commandSql, (err, rows, fields) => {
+    err ? console.log(err) : response.ok("Data berhasil diperbaharui", res);
+  });
+};
+
+// Delete data mahasiswa based on id
+exports.deleteMahasiswa = function (req, res) {
+  const { id } = req.body;
+  const commandSql = `DELETE FROM mahasiswa WHERE id_mahasiswa=${id}`;
+
+  connection.query(commandSql, (err, rows, fields) => {
+    return err ? console.log(err) : response.ok("Berhasil dihapus", res);
+  });
+};

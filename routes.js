@@ -10,4 +10,8 @@ module.exports = function (app) {
   app.route("/mahasiswa/:id").get(json.idMahasiswa);
 
   app.route("/tambah-mahasiswa").post(json.postMahasiswa);
+
+  app.route("/ubah-mahasiswa").put(json.updateMahasiswa);
+
+  app.route("/hapus-id-mahasiswa").delete(json.deleteMahasiswa);
 };
